@@ -1,8 +1,9 @@
-from throttler import Request, Throttler
-
 from freezegun import freeze_time
 
-def test_basics():
+from throttler import Request, Throttler
+
+
+def test_basics() -> None:
     throttler = Throttler(per_second=3)
 
     request = Request()
